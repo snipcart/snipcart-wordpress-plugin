@@ -29,9 +29,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-add_action('init', 'add_product_type');
+add_action('init', 'add_snipcart_product_type');
 
-function add_product_type() {
+function add_snipcart_product_type() {
     $labels = array(
         'name' => 'Products',
         'singular_name' => 'Product',
@@ -55,7 +55,7 @@ function add_product_type() {
         'show_ui' => true,
         'show_in_menu' => true,
         'query_var' => true,
-        'rewrite' => array('slug' => 'product'),
+        'rewrite' => array('slug' => 'products'),
         'capability_type' => 'post',
         'has_archive' => true,
         'hierarchical' => false,
@@ -70,5 +70,5 @@ function add_product_type() {
         )
     );
 
-    register_post_type('product', $args);
+    register_post_type('snipcart_product', $args);
 }
