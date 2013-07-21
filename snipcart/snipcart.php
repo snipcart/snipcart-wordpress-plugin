@@ -32,8 +32,10 @@ THE SOFTWARE.
 include('register_type.php');
 include('metabox.php');
 include('addtocart.php');
+include('settings.php');
 
 add_action('init', 'snipcart_register_product_type');
 add_action('add_meta_boxes', 'snipcart_add_product_meta_box');
 add_action('save_post', 'snipcart_save_product', 10, 2);
 add_filter('the_content', 'snipcart_add_addtocart_button');
+add_action('admin_menu', 'snipcart_add_admin_menu');

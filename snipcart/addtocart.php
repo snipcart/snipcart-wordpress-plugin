@@ -1,5 +1,9 @@
 <?php
 
+/*
+Adds 'Add to Cart' to products.
+*/
+
 function snipcart_add_addtocart_button($content) {
     if (is_feed()) return $content;
 

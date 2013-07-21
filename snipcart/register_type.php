@@ -1,7 +1,6 @@
 <?php
-
 /*
-This code registers the new Product post type (snipcart_product).
+Registers the new Product post type (snipcart_product).
 */
 
 function snipcart_register_product_type() {

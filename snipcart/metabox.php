@@ -1,7 +1,6 @@
 <?php
 /*
-This is for the custom section in the product page in the admin to add custom
-data like the price and the product id.
+Adds custom section in the product page in the admin for produt details.
 */
 
 function snipcart_add_product_meta_box() {
