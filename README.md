@@ -11,22 +11,10 @@ This section is for developers who contriute to this plugin.
 
 ### Locales
 
-#### Generating POT file
+When editing PHP files, you have to regenerate the POT file.
 
-Go in `snipcart-wordpress-plugin/snipcart` directory and execute the following line. __TODO Write a bash file for that__
+    ./tools/generate-pot-file.sh
 
-    xgettext --default-domain=snipcart-plugin --language=PHP --keyword=__ --keyword=_e --sort-by-file --package-name=snipcart-plugin *.php
+When all the PO files are ready, you can generate the MO files.
 
-#### Generating a new PO file
-
-__TODO__
-
-#### Merging an existing PO file with a new POT file
-
-__TODO__
-
-#### Generating MO file
-
-Go in `snipcart-wordpress-plugin/snipcart/languages` and execute the following line. __TODO Write a bash file for that__
-
-    for file in `find . -name "*.po"` ; do msgfmt -o `echo $file | sed s/\.po/\.mo/` $file ; done
+    ./tools/generate-mo-files.sh

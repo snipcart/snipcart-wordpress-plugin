@@ -14,4 +14,4 @@ msgstr ""
 
 #: addtocart.php:38
 msgid "Add to Cart"
-msgstr "Add to Cart"
+msgstr "Ajouter au panier"
