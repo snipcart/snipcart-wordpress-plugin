@@ -5,6 +5,8 @@ Adds 'Add to Cart' to products.
 
 function snipcart_add_addtocart_button($content) {
     if (is_feed()) return $content;
+    global $post;
+    if ($post->post_type != 'snipcart_product') return $content;
 
     $content = snipcart_addtocartbutton() . $content;
 
@@ -17,9 +19,7 @@ function snipcart_addtocartbutton() {
 
     $attributes['data-item-id'] =
         get_post_meta($post->ID, 'snipcart_product_id', true);
-
     $attributes['data-item-name'] = get_the_title();
-
     $attributes['data-item-price'] =
         get_post_meta($post->ID, 'snipcart_price', true);
     $attributes['data-item-url'] = get_permalink();
@@ -27,6 +27,11 @@ function snipcart_addtocartbutton() {
         get_post_meta($post->ID, 'snipcart_description', true);
     $attributes['data-item-price'] =
         get_post_meta($post->ID, 'snipcart_weight', true);
+    if (has_post_thumbnail($post->ID)) {
+        $image_id = get_post_thumbnail_id($post->ID);
+        $image = wp_get_attachment_image_src($image_id, 'snipcart-image');
+        $attributes['data-item-image'] = $image[0];
+    }
 
     $attrs = '';
     foreach ($attributes as $key => $value) {

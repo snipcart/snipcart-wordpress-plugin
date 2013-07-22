@@ -50,7 +50,7 @@ msgstr "Ajouter un nouveau produit"
 
 #: register_type.php:12
 msgid "Edit Product"
-msgstr "Modifier un produit"
+msgstr "Modifier le produit"
 
 #: register_type.php:13
 msgid "New Product"
