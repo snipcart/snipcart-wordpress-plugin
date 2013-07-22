@@ -1,5 +1,4 @@
 <?php
-
 /*
 Adds 'Add to Cart' to products.
 */

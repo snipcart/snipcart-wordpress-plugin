@@ -63,6 +63,7 @@ function snipcart_display_product_metabox($post) {
 function snipcart_save_product($product_id, $product) {
     if ($product->post_type != 'snipcart_product') return;
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if ($_SERVER['REQUEST_METHOD'] != 'POST') return;
 
     update_post_meta($product_id, 'snipcart_price', $_POST['snipcart-price']);
     update_post_meta($product_id, 'snipcart_product_id',
