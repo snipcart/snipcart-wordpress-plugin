@@ -9,7 +9,7 @@ function snipcart_add_product_meta_box() {
         'Product Details',
         'snipcart_display_product_metabox',
         'snipcart_product',
-        'side',
+        'normal',
         'high'
     );
 }
@@ -18,6 +18,7 @@ function snipcart_display_product_metabox($post) {
     $product_id = get_post_meta($post->ID, 'snipcart_product_id', true);
     $price = get_post_meta($post->ID, 'snipcart_price', true);
     $weight = get_post_meta($post->ID, 'snipcart_weight', true);
+    $description = get_post_meta($post->ID, 'snipcart_description', true);
     ?>
     <table>
         <tr>
@@ -29,6 +30,18 @@ function snipcart_display_product_metabox($post) {
                     value="<?php echo $product_id; ?>"
                     name="snipcart-product-id"
                     id="snipcart-product-id"
+                    />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="snipcart-description">Description</label>
+            </th>
+            <td>
+                <input type="text"
+                    value="<?php echo $description; ?>"
+                    name="snipcart-description"
+                    id="snipcart-description"
                     />
             </td>
         </tr>
@@ -70,4 +83,6 @@ function snipcart_save_product($product_id, $product) {
         $_POST['snipcart-product-id']);
     update_post_meta($product_id, 'snipcart_weight',
         $_POST['snipcart-weight']);
+    update_post_meta($product_id, 'snipcart_description',
+        $_POST['snipcart-description']);
 }

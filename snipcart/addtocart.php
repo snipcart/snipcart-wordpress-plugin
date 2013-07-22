@@ -23,8 +23,8 @@ function snipcart_addtocartbutton() {
     $attributes['data-item-price'] =
         get_post_meta($post->ID, 'snipcart_price', true);
     $attributes['data-item-url'] = get_permalink();
-    // TODO add item description (the following line creates a infinite loop)
-    // $attributes['data-item-description'] = get_the_excerpt();
+    $attributes['data-item-description'] =
+        get_post_meta($post->ID, 'snipcart_description', true);
     $attributes['data-item-price'] =
         get_post_meta($post->ID, 'snipcart_weight', true);
 
