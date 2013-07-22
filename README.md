@@ -4,3 +4,11 @@ Snipcart Wordpress Plugin
 This is a plugin for Wordpress to add "products" post type and snipcart settings.
 
 Do not use as of yet, it is still in very infatile stage.
+
+## Development
+
+This section is for developers who contriute to this plugin.
+
+### Generating POT file
+
+    xgettext --default-domain=snipcart-plugin --language=PHP --keyword=__ --keyword=_e --sort-by-file --package-name=snipcart-plugin *.php

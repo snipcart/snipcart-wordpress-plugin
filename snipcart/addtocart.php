@@ -35,7 +35,7 @@ function snipcart_addtocartbutton() {
         $attrs .= $attr;
     }
 
-    $button_text = 'Add to Cart'; // TODO this string in settings
+    $button_text = __('Add to Cart', 'snipcart-plugin');
     $button = '<p><a href="#" class="snipcart-add-item" '
         . $attrs . '>' . $button_text . '</a></p>';
 
