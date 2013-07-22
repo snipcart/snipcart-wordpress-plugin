@@ -15,6 +15,10 @@ When editing PHP files, you have to regenerate the POT file.
 
     ./tools/generate-pot-file.sh
 
+When the POT file has been generated, you can merge with existing PO files.
+
+    ./tools/merge-po-file.sh fr_CA
+
 When all the PO files are ready, you can generate the MO files.
 
     ./tools/generate-mo-files.sh

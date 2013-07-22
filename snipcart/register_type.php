@@ -5,19 +5,19 @@ Registers the new Product post type (snipcart_product).
 
 function snipcart_register_product_type() {
     $labels = array(
-        'name' => 'Products',
-        'singular_name' => 'Product',
-        'add_new' => 'Add New',
-        'add_new_item' => 'Add New Product',
-        'edit_item' => 'Edit Product',
-        'new_item' => 'New Product',
-        'all_items' => 'All Products',
-        'view_item' => 'View Product',
-        'search_items' => 'Search Products',
-        'not_found' =>  'No products found',
-        'not_found_in_trash' => 'No products found in Trash',
+        'name' => __('Products', 'snipcart-plugin'),
+        'singular_name' => __('Product', 'snipcart-plugin'),
+        'add_new' => __('Add New', 'snipcart-plugin'),
+        'add_new_item' => __('Add New Product', 'snipcart-plugin'),
+        'edit_item' => __('Edit Product', 'snipcart-plugin'),
+        'new_item' => __('New Product', 'snipcart-plugin'),
+        'all_items' => __('All Products', 'snipcart-plugin'),
+        'view_item' => __('View Product', 'snipcart-plugin'),
+        'search_items' => __('Search Products', 'snipcart-plugin'),
+        'not_found' =>  __('No products found', 'snipcart-plugin'),
+        'not_found_in_trash' => __('No products found in Trash', 'snipcart-plugin'),
         'parent_item_colon' => '',
-        'menu_name' => 'Products'
+        'menu_name' => __('Products', 'snipcart-plugin')
     );
 
     $args = array(

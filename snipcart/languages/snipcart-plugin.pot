@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 14:30+0000\n"
+"POT-Creation-Date: 2013-07-22 18:28+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,4 +19,80 @@ msgstr ""
 
 #: addtocart.php:38
 msgid "Add to Cart"
+msgstr ""
+
+#: metabox.php:27
+msgid "Product ID"
+msgstr ""
+
+#: metabox.php:41
+msgid "Description"
+msgstr ""
+
+#: metabox.php:55
+msgid "Price"
+msgstr ""
+
+#: metabox.php:69
+msgid "Weight"
+msgstr ""
+
+#: register_type.php:8 register_type.php:20
+msgid "Products"
+msgstr ""
+
+#: register_type.php:9
+msgid "Product"
+msgstr ""
+
+#: register_type.php:10
+msgid "Add New"
+msgstr ""
+
+#: register_type.php:11
+msgid "Add New Product"
+msgstr ""
+
+#: register_type.php:12
+msgid "Edit Product"
+msgstr ""
+
+#: register_type.php:13
+msgid "New Product"
+msgstr ""
+
+#: register_type.php:14
+msgid "All Products"
+msgstr ""
+
+#: register_type.php:15
+msgid "View Product"
+msgstr ""
+
+#: register_type.php:16
+msgid "Search Products"
+msgstr ""
+
+#: register_type.php:17
+msgid "No products found"
+msgstr ""
+
+#: register_type.php:18
+msgid "No products found in Trash"
+msgstr ""
+
+#: settings.php:7 settings.php:28
+msgid "Snipcart Settings"
+msgstr ""
+
+#: settings.php:33
+msgid "Settings saved."
+msgstr ""
+
+#: settings.php:43
+msgid "API Key"
+msgstr ""
+
+#: settings.php:58
+msgid "Save Changes"
 msgstr ""

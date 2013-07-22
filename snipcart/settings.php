@@ -4,12 +4,13 @@ Adds the settings page in the admin.
 */
 
 function snipcart_add_admin_menu() {
-    add_options_page('Snipcart Settings', 'Snipcart', 'manage_options',
-        'snipcart-settings', 'snipcart_display_settings_page');
+    add_options_page(__('Snipcart Settings', 'snipcart-plugin'),
+        'Snipcart', 'manage_options', 'snipcart-settings',
+        'snipcart_display_settings_page');
 }
 
 function snipcart_display_settings_page() {
-    if (!current_user_can('manage_options')) // TODO necessary?
+    if (!current_user_can('manage_options')) // TODO necessary? if yes, i18n
         wp_die('You do not have sufficient permissions to access this page.');
     $saved = false;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -24,12 +25,12 @@ function snipcart_display_settings_page() {
     ?>
     <div class="wrap">
         <?php screen_icon('options-general'); ?>
-        <h2>Snipcart Settings</h2>
+        <h2><?php _e('Snipcart Settings', 'snipcart-plugin'); ?></h2>
         <?php if ($saved): ?>
         <div id="setting-error-settings_updated" class="updated settings-error">
             <p>
                 <strong>
-                    Settings saved.
+                    <?php _e('Settings saved.', 'snipcart-plugin'); ?>
                 </strong>
             </p>
         </div>
@@ -39,7 +40,7 @@ function snipcart_display_settings_page() {
                 <tr valign="top">
                     <th scope="row">
                         <label for="api-key">
-                            API Key
+                            <?php _e('API Key', 'snipcart-plugin'); ?>
                         </label>
                     </th>
                     <td>
@@ -54,10 +55,9 @@ function snipcart_display_settings_page() {
             </table>
             <p>
                 <input type="submit"
-                    value="Save Changes"
+                    value="<?php _e('Save Changes', 'snipcart-plugin'); ?>"
                     class="button-primary"/>
             </p>
-
         </form>
     </div>
     <?php

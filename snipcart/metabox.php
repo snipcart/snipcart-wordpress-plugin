@@ -23,7 +23,9 @@ function snipcart_display_product_metabox($post) {
     <table>
         <tr>
             <th>
-                <label for="snipcart-product-id">Product ID</label>
+                <label for="snipcart-product-id">
+                    <?php _e('Product ID', 'snipcart-plugin'); ?>
+                </label>
             </th>
             <td>
                 <input type="text"
@@ -35,7 +37,9 @@ function snipcart_display_product_metabox($post) {
         </tr>
         <tr>
             <th>
-                <label for="snipcart-description">Description</label>
+                <label for="snipcart-description">
+                    <?php _e('Description', 'snipcart-plugin'); ?>
+                </label>
             </th>
             <td>
                 <input type="text"
@@ -47,7 +51,9 @@ function snipcart_display_product_metabox($post) {
         </tr>
         <tr>
             <th>
-                <label for="snipcart-price">Price</label>
+                <label for="snipcart-price">
+                    <?php _e('Price', 'snipcart-plugin'); ?>
+                </label>
             </th>
             <td>
                 <input type="text"
@@ -59,7 +65,9 @@ function snipcart_display_product_metabox($post) {
         </tr>
         <tr>
             <th>
-                <label for="snipcart-weight">Weight</label>
+                <label for="snipcart-weight">
+                    <?php _e('Weight', 'snipcart-plugin'); ?>
+                </label>
             </th>
             <td>
                 <input type="text"
