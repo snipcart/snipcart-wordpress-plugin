@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: snipcart-plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-22 14:30+0000\n"
+"PO-Revision-Date: 2013-07-22 17:21+0200\n"
+"Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
+"Language-Team: French\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: addtocart.php:38
+msgid "Add to Cart"
+msgstr "Add to Cart"

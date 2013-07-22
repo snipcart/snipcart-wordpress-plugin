@@ -29,12 +29,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+include('locales.php');
 include('register_type.php');
 include('metabox.php');
 include('addtocart.php');
 include('settings.php');
 include('head.php');
 
+add_action('plugins_loaded', 'snipcart_add_locales');
 add_action('init', 'snipcart_register_product_type');
 add_action('add_meta_boxes', 'snipcart_add_product_meta_box');
 add_action('save_post', 'snipcart_save_product', 10, 2);
