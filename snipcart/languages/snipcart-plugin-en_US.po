@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 18:28+0200\n"
+"POT-Creation-Date: 2013-07-24 15:56+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: English\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: addtocart.php:38
+#: addtocart.php:43
 msgid "Add to Cart"
 msgstr "Add to Cart"
 
@@ -31,6 +31,14 @@ msgstr "Price"
 #: metabox.php:69
 msgid "Weight"
 msgstr "Weight"
+
+#: metabox_validation.php:15
+msgid "The form contains errors. The product was not updated."
+msgstr "The form contains errors. The product was not updated."
+
+#: metabox_validation.php:72
+msgid "This field is required"
+msgstr "This field is required"
 
 #: register_type.php:8 register_type.php:20
 msgid "Products"
@@ -75,6 +83,60 @@ msgstr "No products found"
 #: register_type.php:18
 msgid "No products found in Trash"
 msgstr "No products found in Trash"
+
+#: register_type.php:53
+#, php-format
+msgid "Product updated. <a href=\"%s\">View product</a>"
+msgstr "Product updated. <a href=\"%s\">View product</a>"
+
+#: register_type.php:55
+msgid "Custom field updated."
+msgstr "Custom field updated."
+
+#: register_type.php:56
+msgid "Custom field deleted."
+msgstr "Custom field deleted."
+
+#: register_type.php:57
+msgid "Product updated."
+msgstr "Product updated."
+
+#: register_type.php:59
+#, php-format
+msgid "Product restored to revision from %s"
+msgstr "Product restored to revision from %s"
+
+#: register_type.php:61
+#, php-format
+msgid "Product published. <a href=\"%s\">View product</a>"
+msgstr "Product published. <a href=\"%s\">View product</a>"
+
+#: register_type.php:63
+msgid "Product saved."
+msgstr "Product saved."
+
+#: register_type.php:64
+#, php-format
+msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+
+#: register_type.php:67
+#, php-format
+msgid ""
+"Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview product</a>"
+msgstr "Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview product</a>"
+
+#: register_type.php:68
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: register_type.php:71
+#, php-format
+msgid ""
+"Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 
 #: settings.php:7 settings.php:28
 msgid "Snipcart Settings"

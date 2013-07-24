@@ -32,15 +32,23 @@ THE SOFTWARE.
 include('locales.php');
 include('register_type.php');
 include('metabox.php');
+include('metabox_validation.php');
 include('addtocart.php');
 include('settings.php');
 include('head.php');
+include('styles.php');
 
 add_action('plugins_loaded', 'snipcart_add_locales');
 add_action('init', 'snipcart_register_product_type');
+add_filter('post_updated_messages', 'snipcart_post_updated_messages');
 add_action('add_meta_boxes', 'snipcart_add_product_meta_box');
+add_action('admin_print_footer_scripts',
+    'snipcart_meta_box_validation_script');
+add_action('wp_ajax_snipcart_meta_box_validation',
+        'snipcart_meta_box_validation');
 add_action('save_post', 'snipcart_save_product', 10, 2);
 add_filter('the_content', 'snipcart_add_addtocart_button');
 add_action('admin_menu', 'snipcart_add_admin_menu');
 add_action('wp_enqueue_scripts', 'snipcart_enqueue_jquery');
 add_action('wp_head', 'snipcart_head_content');
+add_action('admin_head', 'snipcart_add_styles');

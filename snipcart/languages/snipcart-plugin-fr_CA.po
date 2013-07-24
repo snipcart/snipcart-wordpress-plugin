@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-22 18:28+0200\n"
+"POT-Creation-Date: 2013-07-24 15:56+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: addtocart.php:38
+#: addtocart.php:43
 msgid "Add to Cart"
 msgstr "Ajouter au panier"
 
@@ -31,6 +31,14 @@ msgstr "Prix"
 #: metabox.php:69
 msgid "Weight"
 msgstr "Poids"
+
+#: metabox_validation.php:15
+msgid "The form contains errors. The product was not updated."
+msgstr "Le formulaire contient des erreurs. Le produit n'a pas été mis à jour."
+
+#: metabox_validation.php:72
+msgid "This field is required"
+msgstr "Ce champ est requis"
 
 #: register_type.php:8 register_type.php:20
 msgid "Products"
@@ -76,6 +84,60 @@ msgstr "Aucun produit trouvé"
 msgid "No products found in Trash"
 msgstr "Aucun produit trouvé dans la corbeille"
 
+#: register_type.php:53
+#, php-format
+msgid "Product updated. <a href=\"%s\">View product</a>"
+msgstr "Produit mis à jour. <a href=\"%s\">Voir le produit</a>"
+
+#: register_type.php:55
+msgid "Custom field updated."
+msgstr "Champ personnalisé mis à jour."
+
+#: register_type.php:56
+msgid "Custom field deleted."
+msgstr "Champ personnalisé supprimé."
+
+#: register_type.php:57
+msgid "Product updated."
+msgstr "Produit mis à jour."
+
+#: register_type.php:59
+#, php-format
+msgid "Product restored to revision from %s"
+msgstr "Produit restauré à la révision de %s"
+
+#: register_type.php:61
+#, php-format
+msgid "Product published. <a href=\"%s\">View product</a>"
+msgstr "Product publié. <a href=\"%s\">Voir le produit</a>"
+
+#: register_type.php:63
+msgid "Product saved."
+msgstr "Produit sauvegardé."
+
+#: register_type.php:64
+#, php-format
+msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr "Produit soumis. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
+
+#: register_type.php:67
+#, php-format
+msgid ""
+"Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview product</a>"
+msgstr "Produit programmé pour: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Prévisualiser le produit</a>"
+
+#: register_type.php:68
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: register_type.php:71
+#, php-format
+msgid ""
+"Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr "Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
+
 #: settings.php:7 settings.php:28
 msgid "Snipcart Settings"
 msgstr "Paramètres de Snipcart"
@@ -86,8 +148,8 @@ msgstr "Paramètres sauvegardés."
 
 #: settings.php:43
 msgid "API Key"
-msgstr ""
+msgstr "Clé d'API"
 
 #: settings.php:58
 msgid "Save Changes"
-msgstr ""
+msgstr "Sauvegarder les changements"
