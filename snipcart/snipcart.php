@@ -49,6 +49,7 @@ add_action('wp_ajax_snipcart_meta_box_validation',
 add_action('save_post', 'snipcart_save_product', 10, 2);
 add_filter('the_content', 'snipcart_add_addtocart_button');
 add_action('admin_menu', 'snipcart_add_admin_menu');
+add_action('admin_init', 'snipcart_add_admin_options');
 add_action('wp_enqueue_scripts', 'snipcart_enqueue_jquery');
 add_action('wp_head', 'snipcart_head_content');
 add_action('admin_head', 'snipcart_add_styles');

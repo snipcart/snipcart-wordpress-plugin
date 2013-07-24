@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 20:22+0200\n"
+"POT-Creation-Date: 2013-07-24 20:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -185,22 +185,18 @@ msgid ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 msgstr ""
 
-#: settings.php:7 settings.php:35
+#: settings.php:7 settings.php:39
 msgid "Snipcart Settings"
 msgstr ""
 
-#: settings.php:40
-msgid "Settings saved."
-msgstr ""
-
-#: settings.php:50
+#: settings.php:46
 msgid "API Key"
 msgstr ""
 
-#: settings.php:64
+#: settings.php:60
 msgid "Shipping"
 msgstr ""
 
-#: settings.php:77
+#: settings.php:73
 msgid "Use shipping. You will have to provide weight of each product."
 msgstr ""

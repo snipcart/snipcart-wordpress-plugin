@@ -9,20 +9,24 @@ function snipcart_add_admin_menu() {
         'snipcart_display_settings_page');
 }
 
-function snipcart_display_settings_page() {
-    $saved = false;
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $api_key = esc_attr(trim($_POST['snipcart-api-key']));
-        $use_shipping =
-            array_key_exists('snipcart-use-shipping', $_POST)
-                && esc_attr(trim($_POST['snipcart-use-shipping'])) == 'true'
-                ? 'true'
-                : 'false';
-        update_option('snipcart_api_key', $api_key);
-        update_option('snipcart_use_shipping', $use_shipping);
-        $saved = true;
-    }
+function snipcart_add_admin_options() {
+    register_setting('snipcart_options', 'snipcart_api_key',
+        'snipcart_sanitize_option_string');
+    register_setting('snipcart_options', 'snipcart_use_shipping',
+        'snipcart_sanitize_option_use_shipping');
+}
 
+function snipcart_sanitize_option_string($string) {
+    if ($string == null) $string = '';
+    return esc_attr(trim($string));
+}
+
+function snipcart_sanitize_option_use_shipping($string) {
+    if ($string == null || trim($string) == '') return 'false';
+    return 'true';
+}
+
+function snipcart_display_settings_page() {
     $form = array();
     $form['snipcart-api-key'] = get_option('snipcart_api_key');
     $form['snipcart-use-shipping'] = get_option('snipcart_use_shipping');
@@ -33,16 +37,8 @@ function snipcart_display_settings_page() {
     <div class="wrap">
         <?php screen_icon('options-general'); ?>
         <h2><?php _e('Snipcart Settings', 'snipcart-plugin'); ?></h2>
-        <?php if ($saved): ?>
-        <div id="setting-error-settings_updated" class="updated settings-error">
-            <p>
-                <strong>
-                    <?php _e('Settings saved.', 'snipcart-plugin'); ?>
-                </strong>
-            </p>
-        </div>
-        <?php endif; ?>
-        <form method="POST" action="">
+        <form method="post" action="options.php">
+            <?php settings_fields('snipcart_options'); ?>
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row">
@@ -52,7 +48,7 @@ function snipcart_display_settings_page() {
                     </th>
                     <td>
                         <input type="text"
-                            name="snipcart-api-key"
+                            name="snipcart_api_key"
                             id="snipcart-api-key"
                             class="regular-text"
                             value="<?php echo $form['snipcart-api-key'] ?>"
@@ -66,7 +62,7 @@ function snipcart_display_settings_page() {
                     <td>
                         <label for="snipcart-use-shipping">
                             <input type="checkbox"
-                                name="snipcart-use-shipping"
+                                name="snipcart_use_shipping"
                                 id="snipcart-use-shipping"
                                 value="true"
                                 <?php if ($form['snipcart-use-shipping'] == 'true') {

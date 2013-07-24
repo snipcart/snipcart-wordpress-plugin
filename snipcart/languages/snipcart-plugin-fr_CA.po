@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 20:22+0200\n"
+"POT-Creation-Date: 2013-07-24 20:59+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -187,22 +187,18 @@ msgstr ""
 "Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s"
 "\">Prévisualiser le produit</a>"
 
-#: settings.php:7 settings.php:35
+#: settings.php:7 settings.php:39
 msgid "Snipcart Settings"
 msgstr "Paramètres de Snipcart"
 
-#: settings.php:40
-msgid "Settings saved."
-msgstr "Paramètres sauvegardés."
-
-#: settings.php:50
+#: settings.php:46
 msgid "API Key"
 msgstr "Clé d'API"
 
-#: settings.php:64
+#: settings.php:60
 msgid "Shipping"
 msgstr "Livraison"
 
-#: settings.php:77
+#: settings.php:73
 msgid "Use shipping. You will have to provide weight of each product."
 msgstr "Utiliser la livraison. Vous devrez fournir le poids de chaque produit."
