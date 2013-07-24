@@ -19,8 +19,8 @@ function snipcart_display_product_metabox($post) {
     $price = get_post_meta($post->ID, 'snipcart_price', true);
     $weight = get_post_meta($post->ID, 'snipcart_weight', true);
     $description = get_post_meta($post->ID, 'snipcart_description', true);
-    // TODO add stackable
-    // TODO add max quantity
+    $stackable = get_post_meta($post->ID, 'snipcart_stackable', true);
+    $max_quantity = get_post_meta($post->ID, 'snipcart_max_quantity', true);
     ?>
     <div class="snipcart-field">
         <p>
@@ -81,6 +81,40 @@ function snipcart_display_product_metabox($post) {
                 />
         </p>
     </div>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-max-quantity">
+                <?php _e('Maximum quantity', 'snipcart-plugin'); ?>
+            </label>
+            <small><?php _e('that a customer can buy', 'snipcart-plugin'); ?></small>
+        </p>
+        <p>
+            <input type="text"
+                value="<?php echo $max_quantity; ?>"
+                name="snipcart-max-quantity"
+                id="snipcart-max-quantity"
+                />
+        </p>
+    </div>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-stackable">
+                <input type="checkbox"
+                    value="true"
+                    name="snipcart-stackable"
+                    id="snipcart-stackable"
+                    <?php if ($stackable == NULL || $stackable == 'true') {
+                        echo 'checked';
+                    }?>
+                    />
+                <?php _e('Stackable', 'snipcart-plugin'); ?>
+            </label>
+            <small>
+                <?php _e('if not checked, customers can\'t edit quantity and each unit uses a new line',
+                    'snipcart-plugin'); ?>
+            </small>
+        </p>
+    </div>
     <?php
 }
 
@@ -97,4 +131,10 @@ function snipcart_save_product($product_id, $product) {
         trim($_POST['snipcart-weight']));
     update_post_meta($product_id, 'snipcart_description',
         trim($_POST['snipcart-description']));
+    update_post_meta($product_id, 'snipcart_max_quantity',
+        trim($_POST['snipcart-max-quantity']));
+    $stackable = trim($_POST['snipcart-stackable']) == 'true'
+        ? 'true'
+        : 'false';
+    update_post_meta($product_id, 'snipcart_stackable', $stackable);
 }

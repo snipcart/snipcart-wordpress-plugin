@@ -103,6 +103,13 @@ function snipcart_meta_box_validation() {
             __('Must be a number', 'snipcart-plugin'));
     }
 
+    $max_quantity = snipcart_get_form_value($form, 'snipcart-max-quantity');
+    if ($max_quantity != NULL && trim($max_quantity) != '' &&
+        !preg_match('/^\\s*\\d+\\s*$/', $max_quantity)) {
+        snipcart_add_error($errors, 'snipcart-max-quantity',
+            __('Must be an integer', 'snipcart-plugin'));
+    }
+
     if (count($errors) == 0) echo '{}';
     else echo json_encode($errors);
     die(); // or else will append '0' to response body

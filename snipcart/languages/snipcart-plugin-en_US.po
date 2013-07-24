@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 18:06+0200\n"
+"POT-Creation-Date: 2013-07-24 19:22+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: English\n"
@@ -40,6 +40,24 @@ msgstr "Weight"
 msgid "in grams"
 msgstr "in grams"
 
+#: metabox.php:87
+msgid "Maximum quantity"
+msgstr "Maximum quantity"
+
+#: metabox.php:89
+msgid "that a customer can buy"
+msgstr "that a customer can buy"
+
+#: metabox.php:110
+msgid "Stackable"
+msgstr "Stackable"
+
+#: metabox.php:113
+msgid ""
+"if not checked, customers can't edit quantity and each unit uses a new line"
+msgstr ""
+"if not checked, customers can't edit quantity and each unit uses a new line"
+
 #: metabox_validation.php:15
 msgid "The form contains errors. The product was not updated."
 msgstr "The form contains errors. The product was not updated."
@@ -60,6 +78,10 @@ msgstr "Must be a number of the form 123 or 123.45"
 #: metabox_validation.php:103
 msgid "Must be a number"
 msgstr "Must be a number"
+
+#: metabox_validation.php:110
+msgid "Must be an integer"
+msgstr "Must be an integer"
 
 #: register_type.php:8 register_type.php:20
 msgid "Products"
