@@ -19,14 +19,28 @@ function snipcart_addtocartbutton() {
 
     $attributes['data-item-id'] =
         get_post_meta($post->ID, 'snipcart_product_id', true);
+
     $attributes['data-item-name'] = get_the_title();
+
     $attributes['data-item-price'] =
         get_post_meta($post->ID, 'snipcart_price', true);
+
     $attributes['data-item-url'] = get_permalink();
+
     $attributes['data-item-description'] =
         get_post_meta($post->ID, 'snipcart_description', true);
-    $attributes['data-item-price'] =
-        get_post_meta($post->ID, 'snipcart_weight', true);
+
+    $weight = get_post_meta($post->ID, 'snipcart_weight', true);
+    if ($weight != NULL && $weight != '')
+        $attributes['data-item-weight'] = $weight;
+
+    $attributes['data-item-stackable'] =
+        get_post_meta($post->ID, 'snipcart_stackable', true);
+
+    $max_quantity = get_post_meta($post->ID, 'snipcart_max_quantity', true);
+    if ($max_quantity != NULL && $max_quantity != '')
+        $attributes['data-item-max-quantity'] = $max_quantity;
+
     if (has_post_thumbnail($post->ID)) {
         $image_id = get_post_thumbnail_id($post->ID);
         $image = wp_get_attachment_image_src($image_id, 'snipcart-image');
@@ -35,8 +49,7 @@ function snipcart_addtocartbutton() {
 
     $attrs = '';
     foreach ($attributes as $key => $value) {
-        // TODO encode special chars of $value
-        $attr = $key . '="' . $value . '" ';
+        $attr = $key . '="' . htmlspecialchars($value) . '" ';
         $attrs .= $attr;
     }
 
