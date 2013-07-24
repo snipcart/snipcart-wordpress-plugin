@@ -36,11 +36,17 @@ function snipcart_meta_box_validation_script() {
             }
             $('body').scrollTop(0);
         }
-
-        $('#post').submit(function(ev, skipValidation) {
-            if (skipValidation)
-                return true;
-            ev.preventDefault();
+        // remember which button was clicked if any (needed to publish)
+        $('#post input[type=submit]').click(function() {
+            $('<input type="hidden">')
+                .appendTo($(this).parents('form').first())
+                .attr('name', $(this).attr('name'))
+                .attr('value', $(this).attr('value'))
+                .addClass('clicked-button');
+        });
+        var formIsValid = false;
+        $('#post').submit(function(ev) {
+            if (!formIsValid) ev.preventDefault();
             var formData = JSON.stringify($('#post').serializeArray());
             var data = {
                 action: 'snipcart_meta_box_validation',
@@ -49,11 +55,14 @@ function snipcart_meta_box_validation_script() {
             };
             $.post(ajaxurl, data, function(errors) {
                 $('.spinner').hide();
-                $('#publish').removeClass('button-primary-disabled');
-                if ($.isEmptyObject(errors))
-                    $('#post').trigger('submit', true);
-                else
+                $('#publish').prop('disabled', false).removeClass('button-primary-disabled');
+                if ($.isEmptyObject(errors)) {
+                    formIsValid = true;
+                    $('#post').submit();
+                } else {
                     showErrors(errors);
+                    $('.clicked-button').remove();
+                }
             });
         });
     });
