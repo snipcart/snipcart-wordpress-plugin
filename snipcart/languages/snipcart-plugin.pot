@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 16:54+0200\n"
+"POT-Creation-Date: 2013-07-24 17:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Product Details"
 msgstr ""
 
-#: metabox.php:26
+#: metabox.php:28
 msgid "Product ID"
 msgstr ""
 
-#: metabox.php:41
+#: metabox.php:43
 msgid "Description"
 msgstr ""
 
-#: metabox.php:55
+#: metabox.php:57
 msgid "Price"
 msgstr ""
 
-#: metabox.php:69
+#: metabox.php:72
 msgid "Weight"
 msgstr ""
 
-#: metabox.php:71
+#: metabox.php:74
 msgid "in grams"
 msgstr ""
 
@@ -49,8 +49,16 @@ msgstr ""
 msgid "The form contains errors. The product was not updated."
 msgstr ""
 
-#: metabox_validation.php:74
+#: metabox_validation.php:74 metabox_validation.php:82
 msgid "This field is required"
+msgstr ""
+
+#: metabox_validation.php:85
+msgid "Must be a number of the form 123 or 123.45"
+msgstr ""
+
+#: metabox_validation.php:92
+msgid "Must be a number"
 msgstr ""
 
 #: register_type.php:8 register_type.php:20

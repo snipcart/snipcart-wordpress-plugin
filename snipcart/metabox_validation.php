@@ -71,7 +71,26 @@ function snipcart_meta_box_validation() {
     $product_id = snipcart_get_form_value($form, 'snipcart-product-id');
     if ($product_id == NULL || trim($product_id) == '') {
         snipcart_add_error($errors, 'snipcart-product-id',
-            __('This field is required'));
+            __('This field is required', 'snipcart-plugin'));
+    }
+
+    // TODO check if id is unique
+
+    $price = snipcart_get_form_value($form, 'snipcart-price');
+    if ($price == NULL || trim($price) == '') {
+        snipcart_add_error($errors, 'snipcart-price',
+            __('This field is required', 'snipcart-plugin'));
+    } else if (!preg_match('/^\\s*\\d+(.\\d{2})?\\s*$/', $price)) {
+        snipcart_add_error($errors, 'snipcart-price',
+            __('Must be a number of the form 123 or 123.45',
+                'snipcart-plugin'));
+    }
+
+    $weight = snipcart_get_form_value($form, 'snipcart-weight');
+    if ($weight != NULL && trim($weight) != '' &&
+        !preg_match('/^\\s*\\d+(.\\d+)?\\s*$/', $weight)) {
+        snipcart_add_error($errors, 'snipcart-weight',
+            __('Must be a number', 'snipcart-plugin'));
     }
 
     if (count($errors) == 0) echo '{}';

@@ -19,13 +19,15 @@ function snipcart_display_product_metabox($post) {
     $price = get_post_meta($post->ID, 'snipcart_price', true);
     $weight = get_post_meta($post->ID, 'snipcart_weight', true);
     $description = get_post_meta($post->ID, 'snipcart_description', true);
+    // TODO add stackable
+    // TODO add max quantity
     ?>
     <div class="snipcart-field">
         <p>
             <label for="snipcart-product-id">
                 <?php _e('Product ID', 'snipcart-plugin'); ?>
-                <span class="snipcart-required">*</span>
             </label>
+            <span class="snipcart-required">*</span>
         </p>
         <p>
             <input type="text"
@@ -54,6 +56,7 @@ function snipcart_display_product_metabox($post) {
             <label for="snipcart-price">
                 <?php _e('Price', 'snipcart-plugin'); ?>
             </label>
+            <span class="snipcart-required">*</span>
         </p>
         <p>
             <input type="text"
@@ -86,11 +89,12 @@ function snipcart_save_product($product_id, $product) {
     if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
     if ($_SERVER['REQUEST_METHOD'] != 'POST') return;
 
-    update_post_meta($product_id, 'snipcart_price', $_POST['snipcart-price']);
+    update_post_meta($product_id, 'snipcart_price',
+        trim($_POST['snipcart-price']));
     update_post_meta($product_id, 'snipcart_product_id',
-        $_POST['snipcart-product-id']);
+        trim($_POST['snipcart-product-id']));
     update_post_meta($product_id, 'snipcart_weight',
-        $_POST['snipcart-weight']);
+        trim($_POST['snipcart-weight']));
     update_post_meta($product_id, 'snipcart_description',
-        $_POST['snipcart-description']);
+        trim($_POST['snipcart-description']));
 }
