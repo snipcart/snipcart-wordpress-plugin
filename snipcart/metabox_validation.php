@@ -64,7 +64,10 @@ function snipcart_meta_box_validation_script() {
 
 function snipcart_meta_box_validation() {
     check_ajax_referer('snipcart_validation', 'security');
-    $form = json_decode(str_replace('\\"', '"', $_POST['form']), true);
+    $form_json = $_POST['form'];
+    $form_json = str_replace('\\"', '"', $form_json);
+    $form_json = str_replace("\\'", "'", $form_json);
+    $form = json_decode($form_json, true);
     $post_id = snipcart_get_form_value($form, 'post_ID');
     header('Content-Type: application/json');
     $errors = array();
