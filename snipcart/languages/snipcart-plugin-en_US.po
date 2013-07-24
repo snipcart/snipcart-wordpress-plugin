@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 19:22+0200\n"
+"POT-Creation-Date: 2013-07-24 20:22+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: English\n"
@@ -20,39 +20,39 @@ msgstr "Add to Cart"
 msgid "Product Details"
 msgstr "Product Details"
 
-#: metabox.php:28
+#: metabox.php:30
 msgid "Product ID"
 msgstr "Product ID"
 
-#: metabox.php:43
+#: metabox.php:45
 msgid "Description"
 msgstr "Description"
 
-#: metabox.php:57
+#: metabox.php:59
 msgid "Price"
 msgstr "Price"
 
-#: metabox.php:72
+#: metabox.php:74
 msgid "Weight"
 msgstr "Weight"
 
-#: metabox.php:74
+#: metabox.php:79
 msgid "in grams"
 msgstr "in grams"
 
-#: metabox.php:87
+#: metabox.php:92
 msgid "Maximum quantity"
 msgstr "Maximum quantity"
 
-#: metabox.php:89
+#: metabox.php:94
 msgid "that a customer can buy"
 msgstr "that a customer can buy"
 
-#: metabox.php:110
+#: metabox.php:115
 msgid "Stackable"
 msgstr "Stackable"
 
-#: metabox.php:113
+#: metabox.php:118
 msgid ""
 "if not checked, customers can't edit quantity and each unit uses a new line"
 msgstr ""
@@ -63,6 +63,7 @@ msgid "The form contains errors. The product was not updated."
 msgstr "The form contains errors. The product was not updated."
 
 #: metabox_validation.php:75 metabox_validation.php:92
+#: metabox_validation.php:105
 msgid "This field is required"
 msgstr "This field is required"
 
@@ -75,11 +76,11 @@ msgstr "Must be unique. <a href=\"%s\">This product</a> already uses this ID."
 msgid "Must be a number of the form 123 or 123.45"
 msgstr "Must be a number of the form 123 or 123.45"
 
-#: metabox_validation.php:103
+#: metabox_validation.php:109
 msgid "Must be a number"
 msgstr "Must be a number"
 
-#: metabox_validation.php:110
+#: metabox_validation.php:116
 msgid "Must be an integer"
 msgstr "Must be an integer"
 
@@ -184,18 +185,22 @@ msgid ""
 msgstr ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 
-#: settings.php:7 settings.php:28
+#: settings.php:7 settings.php:35
 msgid "Snipcart Settings"
 msgstr "Snipcart Settings"
 
-#: settings.php:33
+#: settings.php:40
 msgid "Settings saved."
 msgstr "Settings saved."
 
-#: settings.php:43
+#: settings.php:50
 msgid "API Key"
 msgstr "API Key"
 
-#: settings.php:58
-msgid "Save Changes"
-msgstr "Save Changes"
+#: settings.php:64
+msgid "Shipping"
+msgstr "Shipping"
+
+#: settings.php:77
+msgid "Use shipping. You will have to provide weight of each product."
+msgstr "Use shipping. You will have to provide weight of each product."

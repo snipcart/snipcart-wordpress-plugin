@@ -17,6 +17,8 @@ function snipcart_add_product_meta_box() {
 function snipcart_display_product_metabox($post) {
     $product_id = get_post_meta($post->ID, 'snipcart_product_id', true);
     $price = get_post_meta($post->ID, 'snipcart_price', true);
+    $weight_required = get_option('snipcart_use_shipping');
+    if ($weight_required == NULL) $weight_required = 'true';
     $weight = get_post_meta($post->ID, 'snipcart_weight', true);
     $description = get_post_meta($post->ID, 'snipcart_description', true);
     $stackable = get_post_meta($post->ID, 'snipcart_stackable', true);
@@ -71,6 +73,9 @@ function snipcart_display_product_metabox($post) {
             <label for="snipcart-weight">
                 <?php _e('Weight', 'snipcart-plugin'); ?>
             </label>
+            <?php if ($weight_required == 'true') : ?>
+            <span class="snipcart-required">*</span>
+            <?php endif; ?>
             <small><?php _e('in grams', 'snipcart-plugin'); ?></small>
         </p>
         <p>

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 19:22+0200\n"
+"POT-Creation-Date: 2013-07-24 20:22+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -20,39 +20,39 @@ msgstr "Ajouter au panier"
 msgid "Product Details"
 msgstr "Détails du produit"
 
-#: metabox.php:28
+#: metabox.php:30
 msgid "Product ID"
 msgstr "ID du produit"
 
-#: metabox.php:43
+#: metabox.php:45
 msgid "Description"
 msgstr "Description"
 
-#: metabox.php:57
+#: metabox.php:59
 msgid "Price"
 msgstr "Prix"
 
-#: metabox.php:72
+#: metabox.php:74
 msgid "Weight"
 msgstr "Poids"
 
-#: metabox.php:74
+#: metabox.php:79
 msgid "in grams"
 msgstr "en grammes"
 
-#: metabox.php:87
+#: metabox.php:92
 msgid "Maximum quantity"
 msgstr "Quantité maximale"
 
-#: metabox.php:89
+#: metabox.php:94
 msgid "that a customer can buy"
 msgstr "qu'un client peut acheter"
 
-#: metabox.php:110
+#: metabox.php:115
 msgid "Stackable"
 msgstr "Empilable"
 
-#: metabox.php:113
+#: metabox.php:118
 msgid ""
 "if not checked, customers can't edit quantity and each unit uses a new line"
 msgstr ""
@@ -64,6 +64,7 @@ msgid "The form contains errors. The product was not updated."
 msgstr "Le formulaire contient des erreurs. Le produit n'a pas été mis à jour."
 
 #: metabox_validation.php:75 metabox_validation.php:92
+#: metabox_validation.php:105
 msgid "This field is required"
 msgstr "Ce champ est requis"
 
@@ -76,11 +77,11 @@ msgstr "Doit être unique. <a href=\"%s\">Ce produit</a> utilise déjà cet ID."
 msgid "Must be a number of the form 123 or 123.45"
 msgstr "Doit être un nombre ayant la forme 123 ou 123.45"
 
-#: metabox_validation.php:103
+#: metabox_validation.php:109
 msgid "Must be a number"
 msgstr "Doit être un nombre"
 
-#: metabox_validation.php:110
+#: metabox_validation.php:116
 msgid "Must be an integer"
 msgstr "Doit être un nombre entier"
 
@@ -186,18 +187,22 @@ msgstr ""
 "Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s"
 "\">Prévisualiser le produit</a>"
 
-#: settings.php:7 settings.php:28
+#: settings.php:7 settings.php:35
 msgid "Snipcart Settings"
 msgstr "Paramètres de Snipcart"
 
-#: settings.php:33
+#: settings.php:40
 msgid "Settings saved."
 msgstr "Paramètres sauvegardés."
 
-#: settings.php:43
+#: settings.php:50
 msgid "API Key"
 msgstr "Clé d'API"
 
-#: settings.php:58
-msgid "Save Changes"
-msgstr "Sauvegarder les changements"
+#: settings.php:64
+msgid "Shipping"
+msgstr "Livraison"
+
+#: settings.php:77
+msgid "Use shipping. You will have to provide weight of each product."
+msgstr "Utiliser la livraison. Vous devrez fournir le poids de chaque produit."

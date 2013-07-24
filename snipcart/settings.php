@@ -10,17 +10,24 @@ function snipcart_add_admin_menu() {
 }
 
 function snipcart_display_settings_page() {
-    if (!current_user_can('manage_options')) // TODO necessary? if yes, i18n
-        wp_die('You do not have sufficient permissions to access this page.');
     $saved = false;
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $api_key = esc_attr($_POST['api-key']);
+        $api_key = esc_attr(trim($_POST['snipcart-api-key']));
+        $use_shipping =
+            array_key_exists('snipcart-use-shipping', $_POST)
+                && esc_attr(trim($_POST['snipcart-use-shipping'])) == 'true'
+                ? 'true'
+                : 'false';
         update_option('snipcart_api_key', $api_key);
+        update_option('snipcart_use_shipping', $use_shipping);
         $saved = true;
     }
 
     $form = array();
-    $form['api-key'] = get_option('snipcart_api_key');
+    $form['snipcart-api-key'] = get_option('snipcart_api_key');
+    $form['snipcart-use-shipping'] = get_option('snipcart_use_shipping');
+    if ($form['snipcart-use-shipping'] == NULL)
+        $form['snipcart-use-shipping'] = 'true';
 
     ?>
     <div class="wrap">
@@ -39,25 +46,42 @@ function snipcart_display_settings_page() {
             <table class="form-table">
                 <tr valign="top">
                     <th scope="row">
-                        <label for="api-key">
+                        <label for="snipcart-api-key">
                             <?php _e('API Key', 'snipcart-plugin'); ?>
                         </label>
                     </th>
                     <td>
                         <input type="text"
-                            name="api-key"
-                            id="api-key"
+                            name="snipcart-api-key"
+                            id="snipcart-api-key"
                             class="regular-text"
-                            value="<?php echo $form['api-key'] ?>"
+                            value="<?php echo $form['snipcart-api-key'] ?>"
                             />
                     </td>
                 </tr>
+                <tr valign="top">
+                    <th scope="row">
+                        <?php _e('Shipping', 'snipcart-plugin'); ?>
+                    </th>
+                    <td>
+                        <label for="snipcart-use-shipping">
+                            <input type="checkbox"
+                                name="snipcart-use-shipping"
+                                id="snipcart-use-shipping"
+                                value="true"
+                                <?php if ($form['snipcart-use-shipping'] == 'true') {
+                                    echo 'checked';
+                                } ?>
+                                />
+                            <?php
+                                _e('Use shipping. You will have to provide weight of each product.',
+                                'snipcart-plugin');
+                            ?>
+                        </label>
+                    </td>
+                </tr>
             </table>
-            <p>
-                <input type="submit"
-                    value="<?php _e('Save Changes', 'snipcart-plugin'); ?>"
-                    class="button-primary"/>
-            </p>
+            <?php submit_button(); ?>
         </form>
     </div>
     <?php

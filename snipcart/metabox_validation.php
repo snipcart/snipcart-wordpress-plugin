@@ -6,7 +6,7 @@ Adds validation for meta-box in admin.
 function snipcart_meta_box_validation_script() {
     global $post;
     if (!is_admin()) return;
-    if ($post->post_type != 'snipcart_product') return;
+    if ($post != NULL && $post->post_type != 'snipcart_product') return;
     $nonce = wp_create_nonce('snipcart_validation');
     ?>
     <script language="javascript" type="text/javascript">
@@ -96,8 +96,14 @@ function snipcart_meta_box_validation() {
                 'snipcart-plugin'));
     }
 
+    $weight_required = get_option('snipcart_use_shipping');
+    if ($weight_required == NULL) $weight_required = 'true';
     $weight = snipcart_get_form_value($form, 'snipcart-weight');
-    if ($weight != NULL && trim($weight) != '' &&
+    if ($weight_required == 'true'
+        && ($weight == NULL || trim($weight) == '')) {
+        snipcart_add_error($errors, 'snipcart-weight',
+            __('This field is required', 'snipcart-plugin'));
+    } else if ($weight != NULL && trim($weight) != '' &&
         !preg_match('/^\\s*\\d+(.\\d+)?\\s*$/', $weight)) {
         snipcart_add_error($errors, 'snipcart-weight',
             __('Must be a number', 'snipcart-plugin'));
