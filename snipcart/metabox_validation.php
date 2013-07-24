@@ -65,6 +65,7 @@ function snipcart_meta_box_validation_script() {
 function snipcart_meta_box_validation() {
     check_ajax_referer('snipcart_validation', 'security');
     $form = json_decode(str_replace('\\"', '"', $_POST['form']), true);
+    $post_id = snipcart_get_form_value($form, 'post_ID');
     header('Content-Type: application/json');
     $errors = array();
 
@@ -72,9 +73,18 @@ function snipcart_meta_box_validation() {
     if ($product_id == NULL || trim($product_id) == '') {
         snipcart_add_error($errors, 'snipcart-product-id',
             __('This field is required', 'snipcart-plugin'));
+    } else {
+        $product_id = trim($product_id);
+        $other_product_id =
+            snipcart_other_product_that_uses_id($post_id, $product_id);
+        if ($other_product_id != null) {
+            $link = get_edit_post_link($other_product_id);
+            snipcart_add_error($errors, 'snipcart-product-id', sprintf(
+                __('Must be unique. <a href="%s">This product</a> already uses this ID.',
+                'snipcart-plugin'),
+                $link));
+        }
     }
-
-    // TODO check if id is unique
 
     $price = snipcart_get_form_value($form, 'snipcart-price');
     if ($price == NULL || trim($price) == '') {
@@ -116,4 +126,16 @@ function snipcart_get_form_values($form, $key) {
         if ($elem['name'] == $key) $values[] = $elem['value'];
     }
     return $values;
+}
+
+function snipcart_other_product_that_uses_id($post_id, $product_id) {
+    global $wpdb;
+    $sql =
+        "SELECT post_id FROM {$wpdb->prefix}postmeta
+            WHERE post_id != %d
+                AND meta_key = 'snipcart_product_id'
+                AND meta_value = '%s'";
+    $existing_post_id =
+        $wpdb->get_var($wpdb->prepare($sql, $post_id, $product_id));
+    return $existing_post_id;
 }

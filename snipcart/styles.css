@@ -14,7 +14,8 @@
 .snipcart-has-error label,
 .snipcart-has-error input,
 .snipcart-has-error select,
-.snipcart-has-error textarea {
+.snipcart-has-error textarea,
+.snipcart-has-error a {
     color: red;
 }
 

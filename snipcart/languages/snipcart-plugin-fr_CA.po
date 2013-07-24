@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 17:25+0200\n"
+"POT-Creation-Date: 2013-07-24 18:06+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -44,15 +44,20 @@ msgstr "en grammes"
 msgid "The form contains errors. The product was not updated."
 msgstr "Le formulaire contient des erreurs. Le produit n'a pas été mis à jour."
 
-#: metabox_validation.php:74 metabox_validation.php:82
+#: metabox_validation.php:75 metabox_validation.php:92
 msgid "This field is required"
 msgstr "Ce champ est requis"
 
-#: metabox_validation.php:85
+#: metabox_validation.php:83
+#, php-format
+msgid "Must be unique. <a href=\"%s\">This product</a> already uses this ID."
+msgstr "Doit être unique. <a href=\"%s\">Ce produit</a> utilise déjà cet ID."
+
+#: metabox_validation.php:95
 msgid "Must be a number of the form 123 or 123.45"
 msgstr "Doit être un nombre ayant la forme 123 ou 123.45"
 
-#: metabox_validation.php:92
+#: metabox_validation.php:103
 msgid "Must be a number"
 msgstr "Doit être un nombre"
 

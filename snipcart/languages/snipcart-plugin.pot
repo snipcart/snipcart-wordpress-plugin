@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 17:25+0200\n"
+"POT-Creation-Date: 2013-07-24 18:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,15 +49,20 @@ msgstr ""
 msgid "The form contains errors. The product was not updated."
 msgstr ""
 
-#: metabox_validation.php:74 metabox_validation.php:82
+#: metabox_validation.php:75 metabox_validation.php:92
 msgid "This field is required"
 msgstr ""
 
-#: metabox_validation.php:85
+#: metabox_validation.php:83
+#, php-format
+msgid "Must be unique. <a href=\"%s\">This product</a> already uses this ID."
+msgstr ""
+
+#: metabox_validation.php:95
 msgid "Must be a number of the form 123 or 123.45"
 msgstr ""
 
-#: metabox_validation.php:92
+#: metabox_validation.php:103
 msgid "Must be a number"
 msgstr ""
 
