@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 15:56+0200\n"
+"POT-Creation-Date: 2013-07-24 16:54+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,11 @@ msgstr ""
 msgid "Add to Cart"
 msgstr ""
 
-#: metabox.php:27
+#: metabox.php:9
+msgid "Product Details"
+msgstr ""
+
+#: metabox.php:26
 msgid "Product ID"
 msgstr ""
 
@@ -37,11 +41,15 @@ msgstr ""
 msgid "Weight"
 msgstr ""
 
+#: metabox.php:71
+msgid "in grams"
+msgstr ""
+
 #: metabox_validation.php:15
 msgid "The form contains errors. The product was not updated."
 msgstr ""
 
-#: metabox_validation.php:72
+#: metabox_validation.php:74
 msgid "This field is required"
 msgstr ""
 
@@ -94,49 +102,49 @@ msgstr ""
 msgid "Product updated. <a href=\"%s\">View product</a>"
 msgstr ""
 
-#: register_type.php:55
+#: register_type.php:56
 msgid "Custom field updated."
 msgstr ""
 
-#: register_type.php:56
+#: register_type.php:57
 msgid "Custom field deleted."
 msgstr ""
 
-#: register_type.php:57
+#: register_type.php:58
 msgid "Product updated."
 msgstr ""
 
-#: register_type.php:59
+#: register_type.php:60
 #, php-format
 msgid "Product restored to revision from %s"
 msgstr ""
 
-#: register_type.php:61
+#: register_type.php:63
 #, php-format
 msgid "Product published. <a href=\"%s\">View product</a>"
 msgstr ""
 
-#: register_type.php:63
+#: register_type.php:66
 msgid "Product saved."
 msgstr ""
 
-#: register_type.php:64
+#: register_type.php:67
 #, php-format
 msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 msgstr ""
 
-#: register_type.php:67
+#: register_type.php:71
 #, php-format
 msgid ""
 "Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
 "\"%2$s\">Preview product</a>"
 msgstr ""
 
-#: register_type.php:68
+#: register_type.php:73
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: register_type.php:71
+#: register_type.php:76
 #, php-format
 msgid ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"

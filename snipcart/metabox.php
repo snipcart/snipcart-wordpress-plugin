@@ -5,8 +5,8 @@ Adds custom section in the product page in the admin for produt details.
 
 function snipcart_add_product_meta_box() {
     add_meta_box(
-        'snipcart_product_meta_box',
-        'Product Details',
+        'snipcart-product-meta-box',
+        __('Product Details', 'snipcart-plugin'),
         'snipcart_display_product_metabox',
         'snipcart_product',
         'normal',
@@ -20,64 +20,64 @@ function snipcart_display_product_metabox($post) {
     $weight = get_post_meta($post->ID, 'snipcart_weight', true);
     $description = get_post_meta($post->ID, 'snipcart_description', true);
     ?>
-    <table>
-        <tr>
-            <th>
-                <label for="snipcart-product-id">
-                    <?php _e('Product ID', 'snipcart-plugin'); ?>
-                </label>
-            </th>
-            <td>
-                <input type="text"
-                    value="<?php echo $product_id; ?>"
-                    name="snipcart-product-id"
-                    id="snipcart-product-id"
-                    />
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <label for="snipcart-description">
-                    <?php _e('Description', 'snipcart-plugin'); ?>
-                </label>
-            </th>
-            <td>
-                <input type="text"
-                    value="<?php echo $description; ?>"
-                    name="snipcart-description"
-                    id="snipcart-description"
-                    />
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <label for="snipcart-price">
-                    <?php _e('Price', 'snipcart-plugin'); ?>
-                </label>
-            </th>
-            <td>
-                <input type="text"
-                    value="<?php echo $price; ?>"
-                    name="snipcart-price"
-                    id="snipcart-price"
-                    />
-            </td>
-        </tr>
-        <tr>
-            <th>
-                <label for="snipcart-weight">
-                    <?php _e('Weight', 'snipcart-plugin'); ?>
-                </label>
-            </th>
-            <td>
-                <input type="text"
-                    value="<?php echo $weight; ?>"
-                    name="snipcart-weight"
-                    id="snipcart-weight"
-                    />
-            </td>
-        </tr>
-    </table>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-product-id">
+                <?php _e('Product ID', 'snipcart-plugin'); ?>
+                <span class="snipcart-required">*</span>
+            </label>
+        </p>
+        <p>
+            <input type="text"
+                value="<?php echo $product_id; ?>"
+                name="snipcart-product-id"
+                id="snipcart-product-id"
+                />
+        </p>
+    </div>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-description">
+                <?php _e('Description', 'snipcart-plugin'); ?>
+            </label>
+        </p>
+        <p>
+            <input type="text"
+                value="<?php echo $description; ?>"
+                name="snipcart-description"
+                id="snipcart-description"
+                />
+        </p>
+    </div>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-price">
+                <?php _e('Price', 'snipcart-plugin'); ?>
+            </label>
+        </p>
+        <p>
+            <input type="text"
+                value="<?php echo $price; ?>"
+                name="snipcart-price"
+                id="snipcart-price"
+                />
+        </p>
+    </div>
+    <div class="snipcart-field">
+        <p>
+            <label for="snipcart-weight">
+                <?php _e('Weight', 'snipcart-plugin'); ?>
+            </label>
+            <small><?php _e('in grams', 'snipcart-plugin'); ?></small>
+        </p>
+        <p>
+            <input type="text"
+                value="<?php echo $weight; ?>"
+                name="snipcart-weight"
+                id="snipcart-weight"
+                />
+        </p>
+    </div>
     <?php
 }
 

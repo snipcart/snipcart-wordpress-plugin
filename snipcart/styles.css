@@ -1,7 +1,14 @@
+#snipcart-product-meta-box label {
+    font-weight: bold;
+}
+
+#snipcart-product-meta-box input[type=text] {
+    width: 100%;
+}
+
 .snipcart-validation-error {
     color: red;
     font-weight: bold;
-    margin: 10px;
 }
 
 .snipcart-has-error label,
@@ -14,4 +21,9 @@
 .snipcart-has-error input {
     border: 1px solid red;
     background: #fee
+}
+
+.snipcart-required {
+    font-weight: bold;
+    color: red;
 }

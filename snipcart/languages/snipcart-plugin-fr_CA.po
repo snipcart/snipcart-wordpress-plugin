@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 15:56+0200\n"
+"POT-Creation-Date: 2013-07-24 16:54+0200\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -16,7 +16,11 @@ msgstr ""
 msgid "Add to Cart"
 msgstr "Ajouter au panier"
 
-#: metabox.php:27
+#: metabox.php:9
+msgid "Product Details"
+msgstr "Détails du produit"
+
+#: metabox.php:26
 msgid "Product ID"
 msgstr "ID du produit"
 
@@ -32,11 +36,15 @@ msgstr "Prix"
 msgid "Weight"
 msgstr "Poids"
 
+#: metabox.php:71
+msgid "in grams"
+msgstr "en grammes"
+
 #: metabox_validation.php:15
 msgid "The form contains errors. The product was not updated."
 msgstr "Le formulaire contient des erreurs. Le produit n'a pas été mis à jour."
 
-#: metabox_validation.php:72
+#: metabox_validation.php:74
 msgid "This field is required"
 msgstr "Ce champ est requis"
 
@@ -89,54 +97,58 @@ msgstr "Aucun produit trouvé dans la corbeille"
 msgid "Product updated. <a href=\"%s\">View product</a>"
 msgstr "Produit mis à jour. <a href=\"%s\">Voir le produit</a>"
 
-#: register_type.php:55
+#: register_type.php:56
 msgid "Custom field updated."
 msgstr "Champ personnalisé mis à jour."
 
-#: register_type.php:56
+#: register_type.php:57
 msgid "Custom field deleted."
 msgstr "Champ personnalisé supprimé."
 
-#: register_type.php:57
+#: register_type.php:58
 msgid "Product updated."
 msgstr "Produit mis à jour."
 
-#: register_type.php:59
+#: register_type.php:60
 #, php-format
 msgid "Product restored to revision from %s"
 msgstr "Produit restauré à la révision de %s"
 
-#: register_type.php:61
+#: register_type.php:63
 #, php-format
 msgid "Product published. <a href=\"%s\">View product</a>"
 msgstr "Product publié. <a href=\"%s\">Voir le produit</a>"
 
-#: register_type.php:63
+#: register_type.php:66
 msgid "Product saved."
 msgstr "Produit sauvegardé."
 
-#: register_type.php:64
-#, php-format
-msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
-msgstr "Produit soumis. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
-
 #: register_type.php:67
 #, php-format
-msgid ""
-"Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
-"\"%2$s\">Preview product</a>"
-msgstr "Produit programmé pour: <strong>%1$s</strong>. <a target=\"_blank\" href="
-"\"%2$s\">Prévisualiser le produit</a>"
-
-#: register_type.php:68
-msgid "M j, Y @ G:i"
-msgstr "M j, Y @ G:i"
+msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
+msgstr ""
+"Produit soumis. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
 
 #: register_type.php:71
 #, php-format
 msgid ""
+"Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Preview product</a>"
+msgstr ""
+"Produit programmé pour: <strong>%1$s</strong>. <a target=\"_blank\" href="
+"\"%2$s\">Prévisualiser le produit</a>"
+
+#: register_type.php:73
+msgid "M j, Y @ G:i"
+msgstr "M j, Y @ G:i"
+
+#: register_type.php:76
+#, php-format
+msgid ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
-msgstr "Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
+msgstr ""
+"Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s"
+"\">Prévisualiser le produit</a>"
 
 #: settings.php:7 settings.php:28
 msgid "Snipcart Settings"

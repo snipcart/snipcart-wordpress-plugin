@@ -30,7 +30,9 @@ function snipcart_meta_box_validation_script() {
                     .addClass('snipcart-validation-error')
                     .html(errors[key].join(', '))
                     .insertAfter($input);
-                $input.closest('tr').addClass('snipcart-has-error');
+                $input
+                    .closest('.snipcart-field')
+                    .addClass('snipcart-has-error');
             }
             $('body').scrollTop(0);
         }
