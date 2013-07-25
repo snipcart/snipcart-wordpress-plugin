@@ -7,7 +7,7 @@ The `Product` type contains additional fields used by Snipcart, like the price a
 
 The setting page is where you set you API key. You can also decide if you use shipping or not.
 
-On the public side, the plugin adds a _Add to Cart_ button.
+On the public side, the plugin adds an _Add to Cart_ button.
 
 ## Installation
 
