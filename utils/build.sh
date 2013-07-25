@@ -5,6 +5,6 @@ cd "$(dirname "$0")/.."
 echo 'Generating MO files'
 utils/generate-mo-files.sh
 echo 'Removing old snipcart.zip if exists'
-rm -f snipcart.zip
+rm -f snipcart-wordpress-plugin.zip
 echo 'Generating snipcart.zip'
-zip snipcart.zip snipcart/*.php snipcart/languages/*.mo
+zip snipcart-wordpress-plugin.zip snipcart/*.php snipcart/languages/*.mo
