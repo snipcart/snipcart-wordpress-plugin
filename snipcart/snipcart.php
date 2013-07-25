@@ -8,7 +8,9 @@ Version: 0.1
 Author URI: https://snipcart.com
 */
 /*
-Copyright (c) 2013 Antoine Leclair <antoineleclair@gmail.com>
+The MIT License
+
+Copyright (c) 2013 Snipcart, Inc. (https://snipcart.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
