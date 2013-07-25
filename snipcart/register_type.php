@@ -43,7 +43,7 @@ function snipcart_register_product_type() {
     );
 
     register_post_type('snipcart_product', $args);
-    add_image_size('snipcart-image', 50, 50, true);
+    add_image_size('snipcart-image', 200, 200, true);
 }
 
 function snipcart_post_updated_messages($messages) {
