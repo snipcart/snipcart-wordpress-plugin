@@ -55,7 +55,9 @@ function snipcart_meta_box_validation_script() {
             };
             $.post(ajaxurl, data, function(errors) {
                 $('.spinner').hide();
-                $('#publish').prop('disabled', false).removeClass('button-primary-disabled');
+                $('#publish')
+                    .prop('disabled', false)
+                    .removeClass('button-primary-disabled');
                 if ($.isEmptyObject(errors)) {
                     formIsValid = true;
                     $('#post').submit();
