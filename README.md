@@ -15,6 +15,10 @@ Copy the folder `snipcart` contained in the zip file into the `wp-content/plugin
 
 You should now have a new _Product_ type in the left column, near _Posts_ and _Pages_. Also, you should have a new page in _Settings_ named _Snipcart_.
 
+## Integration in themes
+
+The actual type that is added for a product is `snipcart_product`.
+
 ## Development
 
 This section is for developers who contribute to this plugin.
