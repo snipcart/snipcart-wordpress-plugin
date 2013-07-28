@@ -39,6 +39,6 @@ When all the PO files are ready, you can generate the MO files.
 
 ### Building the zip to distribute
 
-This will generate the MO files, then zip the plugin into `snipcart.zip`.
+This will generate the MO files, then zip the plugin into `snipcart-wordpress-plugin.zip`.
 
     ./tools/build.sh
