@@ -1,5 +1,5 @@
 === Snipcart ===
-Tags: checkout, commerce, e-commerce, ecommerce, payment, payment gateway, shipping, delivery, tax, promo code, promocode, product
+Tags: shopping cart, checkout, commerce, e-commerce, ecommerce, payment, payment gateway, shipping, delivery, tax, promo code, promocode, product
 Requires at least: 3.0
 Tested up to: 3.5.2
 Stable tag: trunk
