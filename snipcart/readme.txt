@@ -38,3 +38,4 @@ If you would like to contribute, for localization or other development, the GitH
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Add your API key in the 'Settings' menu.
 1. Add products by using the new 'Products' near 'Posts' and 'Pages'
+1. If you use Wordpress Multisite, you have to go in each site that uses the plugin, `Settings` > `Permalinks` and `Save Changes`. If you don't, the products permalinks will give 404s.

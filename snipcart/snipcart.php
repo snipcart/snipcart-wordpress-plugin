@@ -31,14 +31,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-include('locales.php');
-include('register_type.php');
-include('metabox.php');
-include('metabox_validation.php');
-include('addtocart.php');
-include('settings.php');
-include('head.php');
-include('styles.php');
+include(dirname(__FILE__).'/locales.php');
+include(dirname(__FILE__).'/register_type.php');
+include(dirname(__FILE__).'/metabox.php');
+include(dirname(__FILE__).'/metabox_validation.php');
+include(dirname(__FILE__).'/addtocart.php');
+include(dirname(__FILE__).'/settings.php');
+include(dirname(__FILE__).'/head.php');
+include(dirname(__FILE__).'/styles.php');
 
 add_action('plugins_loaded', 'snipcart_add_locales');
 add_action('init', 'snipcart_register_product_type');
