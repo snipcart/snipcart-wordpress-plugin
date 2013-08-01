@@ -20,7 +20,7 @@ The setting page is where you set you API key. You can also decide if you use sh
 
 On the public side, the plugin adds an _Add to Cart_ button.
 
-Note that you have to create an accout on [Snipcart](http://snipcart.com) to use this plugin. Also, when your customers are buying on your website, order information is sent to Snipcart. You can manage your orders on <http://snipcart.com>.
+Note that you have to create an accout on [Snipcart](https://snipcart.com) to use this plugin. Also, when your customers are buying on your website, order information is sent to Snipcart. You can manage your orders on <https://snipcart.com>.
 
 For theme development, the type that is added is `snipcart_product`.
 
