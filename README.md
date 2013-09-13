@@ -11,6 +11,8 @@ On the public side, the plugin adds an _Add to Cart_ button.
 
 ## Installation
 
+Download the plugin from <http://wordpress.org/plugins/snipcart/>.
+
 Copy the folder `snipcart` contained in the zip file into the `wp-content/plugins` folder. In the admin, go to the _Plugins_ section. You should see _Snipcart_ there. Click _Activate_.
 
 You should now have a new _Product_ type in the left column, near _Posts_ and _Pages_. Also, you should have a new page in _Settings_ named _Snipcart_.
