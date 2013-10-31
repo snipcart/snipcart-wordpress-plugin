@@ -1,3 +1,20 @@
+/* Icons */
+
+#menu-posts-snipcart_product .wp-menu-image {
+    background: center center url(img/16x16_menu_off.png) no-repeat !important;
+}
+
+#menu-posts-snipcart_product:hover .wp-menu-image,
+#menu-posts-snipcart_product.wp-has-current-submenu .wp-menu-image {
+    background: center center url(img/16x16_menu_on.png) no-repeat !important;
+}
+
+.icon32-posts-snipcart_product {
+    background: center center url(img/32x32_page.png) no-repeat !important;
+}
+
+/* Form */
+
 #snipcart-product-meta-box label {
     font-weight: bold;
 }
