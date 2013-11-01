@@ -29,18 +29,18 @@ This section is for developers who contribute to this plugin.
 
 When editing PHP files, you have to regenerate the POT file.
 
-    ./tools/generate-pot-file.sh
+    ./utils/generate-pot-file.sh
 
 When the POT file has been generated, you can merge with existing PO files.
 
-    ./tools/merge-po-file.sh fr_FR
+    ./utils/merge-po-file.sh fr_FR
 
 When all the PO files are ready, you can generate the MO files.
 
-    ./tools/generate-mo-files.sh
+    ./utils/generate-mo-files.sh
 
 ### Building the zip to distribute
 
 This will generate the MO files, then zip the plugin into `snipcart-wordpress-plugin.zip`.
 
-    ./tools/build.sh
+    ./utils/build.sh
