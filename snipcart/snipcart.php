@@ -4,7 +4,7 @@ Plugin Name: Snipcart
 Plugin URI: https://snipcart.com
 Description: Easily sell with Snipcart. Adds "Product" post type and settings.
 Author: Snipcart Team
-Version: 0.1
+Version: 0.2
 Author URI: https://snipcart.com
 */
 /*
@@ -38,6 +38,7 @@ include(dirname(__FILE__).'/metabox_validation.php');
 include(dirname(__FILE__).'/addtocart.php');
 include(dirname(__FILE__).'/settings.php');
 include(dirname(__FILE__).'/head.php');
+include(dirname(__FILE__).'/nav.php');
 include(dirname(__FILE__).'/styles.php');
 
 add_action('plugins_loaded', 'snipcart_add_locales');
@@ -47,7 +48,7 @@ add_action('add_meta_boxes', 'snipcart_add_product_meta_box');
 add_action('admin_print_footer_scripts',
     'snipcart_meta_box_validation_script');
 add_action('wp_ajax_snipcart_meta_box_validation',
-        'snipcart_meta_box_validation');
+    'snipcart_meta_box_validation');
 add_action('save_post', 'snipcart_save_product', 10, 2);
 add_filter('the_content', 'snipcart_add_addtocart_button');
 add_action('admin_menu', 'snipcart_add_admin_menu');

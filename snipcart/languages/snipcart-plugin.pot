@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 20:59+0200\n"
+"POT-Creation-Date: 2013-11-01 10:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: addtocart.php:43
+#: addtocart.php:56
 msgid "Add to Cart"
 msgstr ""
 
@@ -66,29 +66,29 @@ msgstr ""
 msgid "The form contains errors. The product was not updated."
 msgstr ""
 
-#: metabox_validation.php:75 metabox_validation.php:92
-#: metabox_validation.php:105
+#: metabox_validation.php:89 metabox_validation.php:106
+#: metabox_validation.php:119
 msgid "This field is required"
 msgstr ""
 
-#: metabox_validation.php:83
+#: metabox_validation.php:97
 #, php-format
 msgid "Must be unique. <a href=\"%s\">This product</a> already uses this ID."
 msgstr ""
 
-#: metabox_validation.php:95
+#: metabox_validation.php:109
 msgid "Must be a number of the form 123 or 123.45"
 msgstr ""
 
-#: metabox_validation.php:109
+#: metabox_validation.php:123
 msgid "Must be a number"
 msgstr ""
 
-#: metabox_validation.php:116
+#: metabox_validation.php:130
 msgid "Must be an integer"
 msgstr ""
 
-#: register_type.php:8 register_type.php:20
+#: nav.php:21 register_type.php:8 register_type.php:20
 msgid "Products"
 msgstr ""
 
@@ -132,71 +132,79 @@ msgstr ""
 msgid "No products found in Trash"
 msgstr ""
 
-#: register_type.php:53
+#: register_type.php:55
 #, php-format
 msgid "Product updated. <a href=\"%s\">View product</a>"
 msgstr ""
 
-#: register_type.php:56
+#: register_type.php:58
 msgid "Custom field updated."
 msgstr ""
 
-#: register_type.php:57
+#: register_type.php:59
 msgid "Custom field deleted."
 msgstr ""
 
-#: register_type.php:58
+#: register_type.php:60
 msgid "Product updated."
 msgstr ""
 
-#: register_type.php:60
+#: register_type.php:62
 #, php-format
 msgid "Product restored to revision from %s"
 msgstr ""
 
-#: register_type.php:63
+#: register_type.php:65
 #, php-format
 msgid "Product published. <a href=\"%s\">View product</a>"
 msgstr ""
 
-#: register_type.php:66
+#: register_type.php:68
 msgid "Product saved."
 msgstr ""
 
-#: register_type.php:67
+#: register_type.php:69
 #, php-format
 msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 msgstr ""
 
-#: register_type.php:71
+#: register_type.php:73
 #, php-format
 msgid ""
 "Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
 "\"%2$s\">Preview product</a>"
 msgstr ""
 
-#: register_type.php:73
+#: register_type.php:75
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: register_type.php:76
+#: register_type.php:78
 #, php-format
 msgid ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 msgstr ""
 
-#: settings.php:7 settings.php:39
+#: settings.php:7 settings.php:50
 msgid "Snipcart Settings"
 msgstr ""
 
-#: settings.php:46
+#: settings.php:57
 msgid "API Key"
 msgstr ""
 
-#: settings.php:60
+#: settings.php:71
 msgid "Shipping"
 msgstr ""
 
-#: settings.php:73
+#: settings.php:84
 msgid "Use shipping. You will have to provide weight of each product."
+msgstr ""
+
+#: settings.php:92
+msgid "Navigation"
+msgstr ""
+
+#: settings.php:105
+msgid "Add a link to products in Wordpress default navigation."
 msgstr ""

@@ -44,6 +44,8 @@ function snipcart_register_product_type() {
 
     register_post_type('snipcart_product', $args);
     add_image_size('snipcart-image', 200, 200, true);
+    add_filter('wp_list_pages', 'snipcart_add_nav_item');
+    add_filter('wp_nav_menu_items', 'snipcart_add_nav_item');
 }
 
 function snipcart_post_updated_messages($messages) {

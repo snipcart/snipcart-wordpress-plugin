@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: snipcart-plugin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-24 20:59+0200\n"
+"POT-Creation-Date: 2013-11-01 10:49-0400\n"
 "PO-Revision-Date: 2013-07-22 17:21+0200\n"
 "Last-Translator: Antoine Leclair <antoineleclair@gmail.com>\n"
 "Language-Team: French\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: addtocart.php:43
+#: addtocart.php:56
 msgid "Add to Cart"
 msgstr "Ajouter au panier"
 
@@ -63,29 +63,29 @@ msgstr ""
 msgid "The form contains errors. The product was not updated."
 msgstr "Le formulaire contient des erreurs. Le produit n'a pas été mis à jour."
 
-#: metabox_validation.php:75 metabox_validation.php:92
-#: metabox_validation.php:105
+#: metabox_validation.php:89 metabox_validation.php:106
+#: metabox_validation.php:119
 msgid "This field is required"
 msgstr "Ce champ est requis"
 
-#: metabox_validation.php:83
+#: metabox_validation.php:97
 #, php-format
 msgid "Must be unique. <a href=\"%s\">This product</a> already uses this ID."
 msgstr "Doit être unique. <a href=\"%s\">Ce produit</a> utilise déjà cet ID."
 
-#: metabox_validation.php:95
+#: metabox_validation.php:109
 msgid "Must be a number of the form 123 or 123.45"
 msgstr "Doit être un nombre ayant la forme 123 ou 123.45"
 
-#: metabox_validation.php:109
+#: metabox_validation.php:123
 msgid "Must be a number"
 msgstr "Doit être un nombre"
 
-#: metabox_validation.php:116
+#: metabox_validation.php:130
 msgid "Must be an integer"
 msgstr "Doit être un nombre entier"
 
-#: register_type.php:8 register_type.php:20
+#: nav.php:21 register_type.php:8 register_type.php:20
 msgid "Products"
 msgstr "Produits"
 
@@ -129,44 +129,44 @@ msgstr "Aucun produit trouvé"
 msgid "No products found in Trash"
 msgstr "Aucun produit trouvé dans la corbeille"
 
-#: register_type.php:53
+#: register_type.php:55
 #, php-format
 msgid "Product updated. <a href=\"%s\">View product</a>"
 msgstr "Produit mis à jour. <a href=\"%s\">Voir le produit</a>"
 
-#: register_type.php:56
+#: register_type.php:58
 msgid "Custom field updated."
 msgstr "Champ personnalisé mis à jour."
 
-#: register_type.php:57
+#: register_type.php:59
 msgid "Custom field deleted."
 msgstr "Champ personnalisé supprimé."
 
-#: register_type.php:58
+#: register_type.php:60
 msgid "Product updated."
 msgstr "Produit mis à jour."
 
-#: register_type.php:60
+#: register_type.php:62
 #, php-format
 msgid "Product restored to revision from %s"
 msgstr "Produit restauré à la révision de %s"
 
-#: register_type.php:63
+#: register_type.php:65
 #, php-format
 msgid "Product published. <a href=\"%s\">View product</a>"
 msgstr "Product publié. <a href=\"%s\">Voir le produit</a>"
 
-#: register_type.php:66
+#: register_type.php:68
 msgid "Product saved."
 msgstr "Produit sauvegardé."
 
-#: register_type.php:67
+#: register_type.php:69
 #, php-format
 msgid "Product submitted. <a target=\"_blank\" href=\"%s\">Preview product</a>"
 msgstr ""
 "Produit soumis. <a target=\"_blank\" href=\"%s\">Prévisualiser le produit</a>"
 
-#: register_type.php:71
+#: register_type.php:73
 #, php-format
 msgid ""
 "Product scheduled for: <strong>%1$s</strong>. <a target=\"_blank\" href="
@@ -175,11 +175,11 @@ msgstr ""
 "Produit programmé pour: <strong>%1$s</strong>. <a target=\"_blank\" href="
 "\"%2$s\">Prévisualiser le produit</a>"
 
-#: register_type.php:73
+#: register_type.php:75
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
-#: register_type.php:76
+#: register_type.php:78
 #, php-format
 msgid ""
 "Product draft updated. <a target=\"_blank\" href=\"%s\">Preview product</a>"
@@ -187,18 +187,27 @@ msgstr ""
 "Brouillon du produit mis à jour. <a target=\"_blank\" href=\"%s"
 "\">Prévisualiser le produit</a>"
 
-#: settings.php:7 settings.php:39
+#: settings.php:7 settings.php:50
 msgid "Snipcart Settings"
 msgstr "Paramètres de Snipcart"
 
-#: settings.php:46
+#: settings.php:57
 msgid "API Key"
 msgstr "Clé d'API"
 
-#: settings.php:60
+#: settings.php:71
 msgid "Shipping"
 msgstr "Livraison"
 
-#: settings.php:73
+#: settings.php:84
 msgid "Use shipping. You will have to provide weight of each product."
 msgstr "Utiliser la livraison. Vous devrez fournir le poids de chaque produit."
+
+#: settings.php:92
+msgid "Navigation"
+msgstr "Navigation"
+
+#: settings.php:105
+msgid "Add a link to products in Wordpress default navigation."
+msgstr "Ajouter un lien vers les produits dans la navigation par défaut"
+" de Wordpress."
