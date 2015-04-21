@@ -1,3 +1,5 @@
+_This repository is deprecated and not maintained anymore. Please take a look at [this blog post](https://snipcart.com/blog/why-we-re-abandoning-support-for-our-wordpress-plugin) to know why._
+
 Snipcart Wordpress Plugin
 =========================
 
