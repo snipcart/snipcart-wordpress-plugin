@@ -1,5 +1,7 @@
 _This repository is deprecated and not maintained anymore. Please take a look at [this blog post](https://snipcart.com/blog/why-we-re-abandoning-support-for-our-wordpress-plugin) to know why._
 
+_We also suggest reading [this Scotch.io blog post](https://scotch.io/tutorials/full-e-commerce-integration-of-snipcart-with-wordpress) to achieve a full, solid integration of Snipcart within WordPress._
+
 Snipcart Wordpress Plugin
 =========================
 
